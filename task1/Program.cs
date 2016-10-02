@@ -13,7 +13,6 @@ namespace task1
         {
             string path = @"..\..\test1.txt";//path to file with triangle
 
-
             string[] rows = File.ReadAllLines(path);
             int[][] ar = new int[rows.Length][];     //array with values
             int[][] maxvalues = new int[rows.Length][];     //array with max length way on the each layer
