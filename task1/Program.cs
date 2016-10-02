@@ -33,10 +33,10 @@ namespace task1
             maxvalues[0][0] = 0;
             int max = 0;
             //
-            for (int i = 1; i < rows.Length; i++)
+            for (int i = 1; i < rows.Length; i++)// for all rows
             {
                 max = 0;//max value in the row
-                for (int j = 0; j < ar[i].Length; j++)
+                for (int j = 0; j < ar[i].Length; j++) for all numbers in row
                 {
                     for (int lastway = j - 1; lastway <= j + 1; lastway++)
                     {//we can come from this elements  
@@ -45,7 +45,7 @@ namespace task1
                             {
                                 if (max < (ar[i][j] + maxvalues[i - 1][lastway]))
                                 {
-                                    max = ar[i][j] + maxvalues[i - 1][lastway];// finding the max value
+                                    max = ar[i][j] + maxvalues[i - 1][lastway];// finding the max value with previous max elem 
                                 }
                             }
                         }
