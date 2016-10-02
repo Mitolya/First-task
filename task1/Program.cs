@@ -32,11 +32,11 @@ namespace task1
             //first step - way is empty
             maxvalues[0][0] = 0;
             int max = 0;
-            //
+            
             for (int i = 1; i < rows.Length; i++)// for all rows
             {
-                max = 0;//max value in the row
-                for (int j = 0; j < ar[i].Length; j++) for all numbers in row
+                max = 0;//init max value in the row
+                for (int j = 0; j < ar[i].Length; j++)// for all numbers in row
                 {
                     for (int lastway = j - 1; lastway <= j + 1; lastway++)
                     {//we can come from this elements  
@@ -50,7 +50,7 @@ namespace task1
                             }
                         }
                     }
-                    maxvalues[i][j] = max;
+                    maxvalues[i][j] = max;//max value for curent elem
                 }
             }
             Console.WriteLine(@"Max length of the way is {0}", max);
